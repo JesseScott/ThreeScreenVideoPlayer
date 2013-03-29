@@ -51,9 +51,9 @@ void setup() {
   textureWindow3 = new GLTextureWindow(this, FourthScreenOffset, 0, FourthScreenWidth, FourthScreenHeight);
   
   // Movies
-  movie1 = new GSMovie(this, "movie1.mov");
-  movie2 = new GSMovie(this, "movie2.mov");
-  movie3 = new GSMovie(this, "movie3.mov");
+  movie1 = new GSMovie(this, "../movies/movie1.mov");
+  movie2 = new GSMovie(this, "../movies/movie2.mov");
+  movie3 = new GSMovie(this, "../movies/movie3.mov");
 
   // Calculate Length
   movie1Length = movie1.length();
