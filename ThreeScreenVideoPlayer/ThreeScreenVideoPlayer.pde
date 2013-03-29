@@ -23,8 +23,9 @@
  *  _________
  * 
  *  GLGraphics     - Andres Colubri
+ *  GSVideo        - Andres Colubri
  *  Video          - Ben Frey & Casey Reas
-
+ *
  *
  * ----------------------------------------------------------------------------
  */
@@ -36,6 +37,7 @@
 import controlP5.*;
 import processing.video.*;
 import codeanticode.glgraphics.*;
+import codeanticode.gsvideo.*;
 import java.util.Properties;
 
   
@@ -43,30 +45,21 @@ import java.util.Properties;
 //-----------------------------------------------------------------------------------------  
 
 // Video
+GSVideo movieOne, movieTwo, movieThree;
 
-
-
-PGraphics offscreen;
+// Offscreen Graphics Buffers
+GLGraphicsOffScreen glg1, glg2, glg3;
 
 // CP5
 ControlP5 cp5;
 RadioButton rb;
-
-
-
-// Graphics Buffers
-PGraphics pg;
-PGraphics cp;
-
-//Windows
-secondApplet s;
-PFrame f2;
 
 // Text
 PFont font;
 
 //Settings
 P5Properties properties;
+
 
 // GLOBAL VARIABLES
 //-----------------------------------------------------------------------------------------
