@@ -22,10 +22,8 @@
  *  Libraries
  *  _________
  * 
- *  GLGraphics     - Andres Colubri
- *  GSVideo        - Andres Colubri
- *  Video          - Ben Frey & Casey Reas
- *
+ *  GLGraphics     - Andres Colubri | http://glgraphics.sourceforge.net/
+ *  GSVideo        - Andres Colubri | http://gsvideo.sourceforge.net/
  *
  * ----------------------------------------------------------------------------
  */

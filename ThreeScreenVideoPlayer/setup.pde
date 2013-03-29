@@ -39,89 +39,23 @@ void setup() {
     exit();
   }
   
-
-
   // Screen stuff
-
-  
-  size(FirstScreenWidth, FirstScreenHeight, P2D);
+  size(FirstScreenWidth, FirstScreenHeight, GLConstants.GLGRAPHICS);
   background(0);
   smooth();
   println();
   
-  // Offset
-  frame.setLocation(FirstScreenOffset,0);
-  
-  // Remote Screen(s)
-  if(NumScreens >= 2){
-    mc = new MessageConsumer();
-    mc.setFrameSize(ThirdScreenOffset,ThirdScreenWidth,ThirdScreenHeight);
-    mc.setBrokerLocation(FirstBrokerLocation);
-    mc.setMessagingTopic(FirstBrokerTopic);
-    mc.start();
-  }
-  if(NumScreens >= 3){
-    mc2 = new MessageConsumer();
-    mc2.setFrameSize(FourthScreenOffset,FourthScreenWidth,FourthScreenHeight);
-    mc2.setBrokerLocation(SecondBrokerLocation);
-    mc2.setMessagingTopic(SecondBrokerTopic);
-    mc2.start();
-  }
-
-
   // Graphics Buffers
-  pg  = createGraphics(FirstScreenWidth, FirstScreenHeight, JAVA2D);  
-  cp = createGraphics(1024, cpSize, JAVA2D); 
+  glg1 = new GLGraphicsOffScreen(this, SecondScreenWidth, SecondScreenHeight, true, 4);
+  glg2 = new GLGraphicsOffScreen(this, ThirdScreenWidth,  ThirdScreenHeight,  true, 4);
+  glg3 = new GLGraphicsOffScreen(this, FourthScreenWidth, FourthScreenHeight, true, 4);
 
   
   // CP5
-  println("Minimum Blob Size Set To " + blobMin);
-  println("Minimum Blob Size Set To " + blobMax);
-  println("Minimum Blob Size Set To " + blobThresh);
   cp5 = new ControlP5(this);
   cp5.addToggle("CAM", 250, FirstScreenHeight + 25, menuHeight/4, menuHeight/4);
   cp5.addToggle("BLB", 300, FirstScreenHeight + 25, menuHeight/4, menuHeight/4);
-  cp5.addBang("SaveSettings")
-     .setPosition(350, FirstScreenHeight + 25)
-     .setSize(25, 25)
-     ;
-//  cp5.addNumberbox("BlobMin")
-//     .setPosition(325, FirstScreenHeight + 25)
-//     .setSize(50,25)
-//     .setRange(0,1)
-//     .setMultiplier(0.01) 
-//     .setDirection(Controller.HORIZONTAL) 
-//     .setValue(blobMin)
-//     ;
-//  cp5.addNumberbox("BlobMax")
-//     .setPosition(400, FirstScreenHeight + 25)
-//     .setSize(50, 25)
-//     .setRange(0,1)
-//     .setMultiplier(0.01) 
-//     .setDirection(Controller.HORIZONTAL) 
-//     .setValue(blobMax)
-//     ;
-//  cp5.addNumberbox("BlobThresh")
-//     .setPosition(475, FirstScreenHeight + 25)
-//     .setSize(50, 25)
-//     .setRange(0,1)
-//     .setMultiplier(0.01) 
-//     .setDirection(Controller.HORIZONTAL)
-//     .setValue(blobThresh)
-//     ;  
-  rb = cp5.addRadioButton("CropBox")
-     .setPosition(25, FirstScreenHeight + 25)
-     .setSize(25, 25)
-     .setColorForeground(color(120))
-     .setColorActive(color(255))
-     .setColorLabel(color(255))
-     .setItemsPerRow(4)
-     .setSpacingColumn(25)
-     .addItem("LEFT", 1)
-     .addItem("RIGHT", 2)
-     .addItem("TOP", 3)
-     .addItem("BOTTOM", 4)
-     ;
+
      
 
   frameRate(120);

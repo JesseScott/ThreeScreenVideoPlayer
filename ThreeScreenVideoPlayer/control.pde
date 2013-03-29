@@ -1,8 +1,6 @@
 
-// Radio Button
-void CropBox(int a) {
-  adjustBox = a;
-}
+//-----------------------------------------------------------------------------------------
+// CONTROL
 
 // Camera
  void CAM(boolean theFlag) {
@@ -22,26 +20,4 @@ void CropBox(int a) {
   }
  }
 
-// Min 
-void BlobMin(float range) {
-  blobMin = range;
-  //println("Minimum Blob Size Set To " + blobMin);
-}
 
-// Max
-void BlobMax(float range) {
-  blobMax = range;
-  //println("Maximum Blob Size Set To " + blobMax);
-}
-
-// Thresh
-void BlobThresh(float thresh) {
-  blobThresh = thresh;
-  //println("Threshold Blob Size Set To " + blobThresh);
-}
-
-// Save Blob Settings
-public void SaveSettings() {
-  saveCalibrationSettings();
-  println("Saving Blob Tracking Config");
-}
