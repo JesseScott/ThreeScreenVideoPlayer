@@ -8,7 +8,7 @@ void setup() {
   try {
     println("Reading Properties");
     properties = new P5Properties();
-    properties.load(openStream("settings.properties"));
+    properties.load(openStream("settings/settings.properties"));
  
     NumScreens = properties.getIntProperty("env.view.numscreens", 1);
     
