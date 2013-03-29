@@ -32,6 +32,7 @@
 // IMPORTS
 //-----------------------------------------------------------------------------------------
 
+import processing.opengl.*;
 import controlP5.*;
 import processing.video.*;
 import codeanticode.glgraphics.*;
@@ -43,7 +44,7 @@ import java.util.Properties;
 //-----------------------------------------------------------------------------------------  
 
 // Video
-GSVideo movieOne, movieTwo, movieThree;
+GSMovie movieOne, movieTwo, movieThree;
 
 // Offscreen Graphics Buffers
 GLGraphicsOffScreen glg1, glg2, glg3;

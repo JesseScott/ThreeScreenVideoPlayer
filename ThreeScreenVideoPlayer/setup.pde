@@ -12,22 +12,22 @@ void setup() {
  
     NumScreens = properties.getIntProperty("env.view.numscreens", 1);
     
-    //editor window
+    // Control Window
     FirstScreenOffset = properties.getIntProperty("env.view.controlWindow.offset", 0);
     FirstScreenWidth = properties.getIntProperty("env.view.controlWindow.width", 500);
     FirstScreenHeight = properties.getIntProperty("env.view.controlWindow.height", 500);
     
-    //projection window
+    // Second Window (First Movie)
     SecondScreenOffset = properties.getIntProperty("env.view.firstBuffer.offset", 55);
     SecondScreenWidth = properties.getIntProperty("env.view.firstBuffer.width", 1024);
     SecondScreenHeight = properties.getIntProperty("env.view.firstBuffer.height", 768);
     
-    //first remote source
+    // Third Window (Second Movie)
     ThirdScreenOffset = properties.getIntProperty("env.view.secondBuffer.offset", 155);
     ThirdScreenWidth = properties.getIntProperty("env.view.secondBuffer.width", 1024);
     ThirdScreenHeight = properties.getIntProperty("env.view.secondBuffer.height", 768);
     
-    //second remote source
+    // Fourth Window (Third Movie)
     FourthScreenOffset = properties.getIntProperty("env.view.thirdBuffer.offset", 255);
     FourthScreenWidth = properties.getIntProperty("env.view.thirdBuffer.width", 1024);
     FourthScreenHeight = properties.getIntProperty("env.view.thirdBuffer.height", 768);
@@ -49,11 +49,16 @@ void setup() {
   glg1 = new GLGraphicsOffScreen(this, SecondScreenWidth, SecondScreenHeight, true, 4);
   glg2 = new GLGraphicsOffScreen(this, ThirdScreenWidth,  ThirdScreenHeight,  true, 4);
   glg3 = new GLGraphicsOffScreen(this, FourthScreenWidth, FourthScreenHeight, true, 4);
+  
+  // Movies
+  movieOne   = new GSMovie(this, "../Movies/movieOne.mov");
+  movieTwo   = new GSMovie(this, "../Movies/movieTwo.mov");
+  movieThree = new GSMovie(this, "../Movies/movieThree.mov");
 
   
   // CP5
   cp5 = new ControlP5(this);
-  cp5.addToggle("CAM", 250, FirstScreenHeight + 25, menuHeight/4, menuHeight/4);
+  cp5.addToggle("PLAY", 250, FirstScreenHeight + 100, menuHeight/4, menuHeight/4);
   cp5.addToggle("BLB", 300, FirstScreenHeight + 25, menuHeight/4, menuHeight/4);
 
      

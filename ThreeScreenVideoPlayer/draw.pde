@@ -8,14 +8,7 @@ void draw() {
 
     
     // Buffer
-    pg.beginDraw();
-      pg.smooth();
 
-      
-    pg.endDraw();
-    
-    // Buffer Image
-    image(pg, 0, 0);
     
     // GUI
     cp5.draw();
