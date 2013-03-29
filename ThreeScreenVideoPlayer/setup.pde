@@ -65,7 +65,10 @@ void setup() {
   cp5.addToggle("PLAY", 250, FirstScreenHeight + 100, menuHeight/4, menuHeight/4);
   cp5.addToggle("RESET", 300, FirstScreenHeight + 25, menuHeight/4, menuHeight/4);
   cp5.addSlider("PLAYHEAD").setPosition(100,50).setRange(0,255);
-     
+  
+  // Font
+  font = loadFont("Serif-48.vlw");
+  textFont(font);  
 
   frameRate(120);
   

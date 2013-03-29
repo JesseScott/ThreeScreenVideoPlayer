@@ -66,13 +66,6 @@ P5Properties properties;
 // GLOBAL VARIABLES
 //-----------------------------------------------------------------------------------------
 
-
-// Images
-PImage logo, license;
-
-// System
-int UseOpenGL, UseSecondScreen;
-
 // Settings
 int NumScreens;
 int FirstScreenWidth, FirstScreenHeight, FirstScreenOffset; 
@@ -82,11 +75,8 @@ int FourthScreenWidth, FourthScreenHeight, FourthScreenOffset;
 
 
 // GUI
-int menuHeight = 100;
-int menuWidth = 1024;
-int cpSize = int(menuHeight * 0.8);
-int picker;
-
+Boolean playing;
+int playHead;
 
 //-----------------------------------------------------------------------------------------
   
