@@ -3,7 +3,8 @@
 // DRAW
 
 void draw() {
-  
+   // Clear BG
+   background(0);
 
 
     

@@ -49,6 +49,9 @@ GSMovie movie1, movie2, movie3;
 // Offscreen Graphics Buffers
 GLGraphicsOffScreen glg1, glg2, glg3;
 
+// Texture Windows
+GLTextureWindow textureWindow1, textureWindow2, textureWindow3;
+
 // Textures
 GLTexture texture1, texture2, texture3;
 
