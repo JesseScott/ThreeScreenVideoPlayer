@@ -10,39 +10,32 @@ void setup() {
     properties = new P5Properties();
     properties.load(openStream("settings.properties"));
  
-    NumScreens = properties.getIntProperty("env.view.numscreens",1);
-    DrawMode = properties.getIntProperty("env.view.drawmode",1);
+    NumScreens = properties.getIntProperty("env.view.numscreens", 1);
     
     //editor window
-    FirstScreenOffset = properties.getIntProperty("env.view.firstscreen.offset", 0);
-    FirstScreenWidth = properties.getIntProperty("env.view.firstscreen.width",640);
-    FirstScreenHeight = properties.getIntProperty("env.view.firstscreen.height",480);
-    EditorBrokerLocation = properties.getProperty("remote.editor.broker.uri", "peer://group1/" + UUID.randomUUID().toString());
-    EditorBrokerTopic = properties.getProperty("remote.editor.broker.topic", "TCP.BERLIN");
+    FirstScreenOffset = properties.getIntProperty("env.view.controlWindow.offset", 0);
+    FirstScreenWidth = properties.getIntProperty("env.view.controlWindow.width", 500);
+    FirstScreenHeight = properties.getIntProperty("env.view.controlWindow.height", 500);
     
     //projection window
-    SecondScreenOffset = properties.getIntProperty("env.view.secondscreen.offset",55);
-    SecondScreenWidth = properties.getIntProperty("env.view.secondscreen.width",640);
-    SecondScreenHeight = properties.getIntProperty("env.view.secondscreen.height",480);
+    SecondScreenOffset = properties.getIntProperty("env.view.firstBuffer.offset", 55);
+    SecondScreenWidth = properties.getIntProperty("env.view.firstBuffer.width", 1024);
+    SecondScreenHeight = properties.getIntProperty("env.view.firstBuffer.height", 768);
     
     //first remote source
-    ThirdScreenOffset = properties.getIntProperty("env.view.thirdscreen.offset",55);
-    ThirdScreenWidth = properties.getIntProperty("env.view.thirdscreen.width",640);
-    ThirdScreenHeight = properties.getIntProperty("env.view.thirdscreen.height",480);
-    FirstBrokerLocation = properties.getProperty("remote.first.broker.uri", "peer://group1/" + UUID.randomUUID().toString());
-    FirstBrokerTopic = properties.getProperty("remote.first.broker.topic", "TCP.BERLIN");
+    ThirdScreenOffset = properties.getIntProperty("env.view.secondBuffer.offset", 155);
+    ThirdScreenWidth = properties.getIntProperty("env.view.secondBuffer.width", 1024);
+    ThirdScreenHeight = properties.getIntProperty("env.view.secondBuffer.height", 768);
     
     //second remote source
-    FourthScreenOffset = properties.getIntProperty("env.view.fourthscreen.offset",55);
-    FourthScreenWidth = properties.getIntProperty("env.view.fourthscreen.width",640);
-    FourthScreenHeight = properties.getIntProperty("env.view.fourthscreen.height",480);
-    SecondBrokerLocation = properties.getProperty("remote.second.broker.uri", "peer://group1/" + UUID.randomUUID().toString());
-    SecondBrokerTopic = properties.getProperty("remote.second.broker.topic", "TCP.BERLIN");
+    FourthScreenOffset = properties.getIntProperty("env.view.thirdBuffer.offset", 255);
+    FourthScreenWidth = properties.getIntProperty("env.view.thirdBuffer.width", 1024);
+    FourthScreenHeight = properties.getIntProperty("env.view.thirdBuffer.height", 768);
     println();
   }
   catch(IOException e) {
     e.printStackTrace();
-    println("couldn't read config file...");
+    println("Couldn't read config file...");
     exit();
   }
   
@@ -51,7 +44,7 @@ void setup() {
   // Screen stuff
 
   
-  size(FirstScreenWidth, FirstScreenHeight + menuHeight, P2D);
+  size(FirstScreenWidth, FirstScreenHeight, P2D);
   background(0);
   smooth();
   println();
