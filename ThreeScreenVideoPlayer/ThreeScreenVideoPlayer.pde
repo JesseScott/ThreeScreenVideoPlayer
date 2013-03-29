@@ -70,7 +70,6 @@ PImage logo, license;
 int UseOpenGL, UseSecondScreen;
 
 // Settings
-int DrawMode;
 int NumScreens;
 int FirstScreenWidth, FirstScreenHeight, FirstScreenOffset; 
 int SecondScreenWidth, SecondScreenHeight, SecondScreenOffset;
