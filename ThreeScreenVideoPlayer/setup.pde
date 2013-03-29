@@ -101,7 +101,7 @@ void setup() {
   cp5.addSlider("SCRUB").setPosition(100, 100).setSize(275, 50).setRange(0, 300);
   
   // Font
-  font = loadFont("Serif-48.vlw");
+  font = loadFont("Serif-24.vlw");
   textFont(font);  
   textSize(24);
 
