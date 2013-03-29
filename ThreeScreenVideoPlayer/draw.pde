@@ -42,7 +42,9 @@ void draw() {
     fps = round(frameRate); 
     //println("FPS " + fps);
   }
+  smooth();
   fill(255);
+  textFont(font);
   text("Frame Rate Is : " + fps, 100, height - 100);
  
 } // end DRAW

@@ -39,8 +39,8 @@ void STOP(boolean theFlag) {
 
 // SCRUB
 void SCRUB(float theVal) {
-  
- // movie1.jump(   );
-  
+  movie1.jump(map(theVal, 0, 300, 0, movie1Length));
+  movie2.jump(map(theVal, 0, 300, 0, movie2Length));
+  movie3.jump(map(theVal, 0, 300, 0, movie3Length)); 
 }
 
