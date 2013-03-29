@@ -47,13 +47,18 @@ void setup() {
   
   // Texture Windows
   textureWindow1 = new GLTextureWindow(this, SecondScreenOffset, 0, SecondScreenWidth, SecondScreenHeight);
-  textureWindow1 = new GLTextureWindow(this, ThirdScreenOffset,  0, ThirdScreenWidth,  ThirdScreenHeight);
-  textureWindow1 = new GLTextureWindow(this, FourthScreenOffset, 0, FourthScreenWidth, FourthScreenHeight);
+  textureWindow2 = new GLTextureWindow(this, ThirdScreenOffset,  0, ThirdScreenWidth,  ThirdScreenHeight);
+  textureWindow3 = new GLTextureWindow(this, FourthScreenOffset, 0, FourthScreenWidth, FourthScreenHeight);
   
   // Movies
   movie1 = new GSMovie(this, "movie1.mov");
   movie2 = new GSMovie(this, "movie2.mov");
   movie3 = new GSMovie(this, "movie3.mov");
+
+  // Calculate Length
+  movie1Length = movie1.length();
+  movie2Length = movie2.length();
+  movie3Length = movie3.length();
 
   // Textures
   texture1 = new GLTexture(this);
@@ -75,19 +80,31 @@ void setup() {
   
   // Assign textures To Texture Windows
   textureWindow1.setTexture(texture1);
-  textureWindow1.setTexture(texture1);
-  textureWindow1.setTexture(texture1);
+  textureWindow2.setTexture(texture2);
+  textureWindow3.setTexture(texture3);
+  
+  // Set Frame Rates
+  textureWindow1.frameRate(30);
+  textureWindow2.frameRate(30);
+  textureWindow3.frameRate(30);
+  
+  // Loop
+  movie1.loop();
+  movie2.loop();
+  movie3.loop();
   
   // CP5
   cp5 = new ControlP5(this);
   cp5.addToggle("PLAY",  FirstScreenWidth / 4, FirstScreenHeight / 4, 75, 75);
-  cp5.addToggle("RESET", FirstScreenWidth / 4, FirstScreenHeight / 2, 75, 75);
-  cp5.addSlider("PLAYHEAD").setPosition(100, 50).setRange(0, 255);
+  cp5.addBang("STOP").setPosition(FirstScreenWidth / 4, FirstScreenHeight / 2).setSize(75, 75);
+  cp5.addSlider("SCRUB").setPosition(100, 50).setRange(0, 255);
   
   // Font
   font = loadFont("Serif-48.vlw");
   textFont(font);  
+  textSize(24);
 
+  // Set Frame Rate (ideal)
   frameRate(120);
   
   println();

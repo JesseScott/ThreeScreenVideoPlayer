@@ -2,26 +2,29 @@
 //-----------------------------------------------------------------------------------------
 // CONTROL
 
-// Camera
- void CAM(boolean theFlag) {
+// PLAY / PAUSE
+void PLAY(boolean theFlag) {
   if(theFlag == true) {
-    //calibShowCam = true;
-  } else if (theFlag == false) {
-    //calibShowCam = false;
+    movie1.play();
+    movie2.play();
+    movie3.play();
+  } 
+  else if (theFlag == false) {
+    movie1.pause();
+    movie2.pause();
+    movie3.pause();
   }
- }
+}
  
-// Blob
- void RESET(boolean theFlag) {
-  if(theFlag == true) {
-    //calibShowBlob = true;
-  } else if (theFlag == false) {
-    //calibShowBlob = false;
-  }
- }
+// STOP
+void STOP(boolean theFlag) {
+  movie1.stop();
+  movie2.stop();
+  movie3.stop();
+}
 
-// Slider
-void PLAYHEAD(float theFlag) {
+// SCRUB
+void SCRUB(float theFlag) {
   
 }
 

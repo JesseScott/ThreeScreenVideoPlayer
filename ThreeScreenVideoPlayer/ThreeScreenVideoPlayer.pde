@@ -76,10 +76,13 @@ int SecondScreenWidth, SecondScreenHeight, SecondScreenOffset;
 int ThirdScreenWidth, ThirdScreenHeight, ThirdScreenOffset;
 int FourthScreenWidth, FourthScreenHeight, FourthScreenOffset;
 
-
 // GUI
 Boolean playing;
 int playHead;
+int fps;
+
+// Movie
+long movie1Length, movie2Length, movie3Length;
 
 //-----------------------------------------------------------------------------------------
   
