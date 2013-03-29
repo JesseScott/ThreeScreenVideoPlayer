@@ -95,9 +95,10 @@ void setup() {
   
   // CP5
   cp5 = new ControlP5(this);
-  cp5.addToggle("PLAY",  FirstScreenWidth / 4, FirstScreenHeight / 4, 75, 75);
-  cp5.addBang("STOP").setPosition(FirstScreenWidth / 4, FirstScreenHeight / 2).setSize(75, 75);
-  cp5.addSlider("SCRUB").setPosition(100, 50).setRange(0, 255);
+  cp5.addToggle("PLAY",  100, 200, 75, 75);
+  cp5.addToggle("LOOP",  200, 200, 75, 75);
+  cp5.addBang("STOP").setPosition(300, 200).setSize(75, 75);
+  cp5.addSlider("SCRUB").setPosition(100, 100).setSize(275, 50).setRange(0, 300);
   
   // Font
   font = loadFont("Serif-48.vlw");

@@ -15,6 +15,20 @@ void PLAY(boolean theFlag) {
     movie3.pause();
   }
 }
+
+// LOOP
+void LOOP(boolean theFlag) {
+  if(theFlag == true) {
+    movie1.loop();
+    movie2.loop();
+    movie3.loop();
+  } 
+  else if (theFlag == false) {
+    movie1.noLoop();
+    movie2.noLoop();
+    movie3.noLoop();
+  }
+}
  
 // STOP
 void STOP(boolean theFlag) {
@@ -24,7 +38,9 @@ void STOP(boolean theFlag) {
 }
 
 // SCRUB
-void SCRUB(float theFlag) {
+void SCRUB(float theVal) {
+  
+ // movie1.jump(   );
   
 }
 
