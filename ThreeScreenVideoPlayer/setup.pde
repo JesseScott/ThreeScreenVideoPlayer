@@ -51,9 +51,9 @@ void setup() {
   textureWindow1 = new GLTextureWindow(this, FourthScreenOffset, 0, FourthScreenWidth, FourthScreenHeight);
   
   // Movies
-  movie1 = new GSMovie(this, "../Movies/movie1.mov");
-  movie2 = new GSMovie(this, "../Movies/movie2.mov");
-  movie2 = new GSMovie(this, "../Movies/movie3.mov");
+  movie1 = new GSMovie(this, "movie1.mov");
+  movie2 = new GSMovie(this, "movie2.mov");
+  movie3 = new GSMovie(this, "movie3.mov");
 
   // Textures
   texture1 = new GLTexture(this);
