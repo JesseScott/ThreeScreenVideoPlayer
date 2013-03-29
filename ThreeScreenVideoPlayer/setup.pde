@@ -6,7 +6,7 @@ void setup() {
  
   // Reading settings.properties File
   try {
-    println("Reading Properties");
+    println("TSVP: Reading Properties");
     properties = new P5Properties();
     properties.load(openStream("settings/settings.properties"));
  
@@ -35,7 +35,7 @@ void setup() {
   }
   catch(IOException e) {
     e.printStackTrace();
-    println("Couldn't read config file...");
+    println("TSVP: Couldn't read config file...");
     exit();
   }
   
@@ -110,7 +110,7 @@ void setup() {
   
   println();
   println("----------------------");
-  println("    END OF SETUP  ");
+  println("TSVP:     END OF SETUP  ");
   println("----------------------");
   println();
   

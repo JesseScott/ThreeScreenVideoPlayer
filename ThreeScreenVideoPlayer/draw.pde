@@ -40,7 +40,7 @@ void draw() {
   // FPS
   if(frameCount % 120 == 0) {
     fps = round(frameRate); 
-    //println("FPS " + fps);
+    println("TSVP: FPS " + fps);
   }
   smooth();
   fill(255);
