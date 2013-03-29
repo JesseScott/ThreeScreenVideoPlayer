@@ -12,7 +12,7 @@
  }
  
 // Blob
- void BLB(boolean theFlag) {
+ void RESET(boolean theFlag) {
   if(theFlag == true) {
     //calibShowBlob = true;
   } else if (theFlag == false) {
@@ -20,4 +20,8 @@
   }
  }
 
+// Slider
+void PLAYHEAD(float theFlag) {
+  
+}
 

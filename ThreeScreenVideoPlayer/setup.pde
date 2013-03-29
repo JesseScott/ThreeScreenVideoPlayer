@@ -51,16 +51,20 @@ void setup() {
   glg3 = new GLGraphicsOffScreen(this, FourthScreenWidth, FourthScreenHeight, true, 4);
   
   // Movies
-  movieOne   = new GSMovie(this, "../Movies/movieOne.mov");
-  movieTwo   = new GSMovie(this, "../Movies/movieTwo.mov");
-  movieThree = new GSMovie(this, "../Movies/movieThree.mov");
+  movie1 = new GSMovie(this, "../Movies/movie1.mov");
+  movie2 = new GSMovie(this, "../Movies/movie2.mov");
+  movie2 = new GSMovie(this, "../Movies/movie3.mov");
 
+  // Textures
+  texture1 = new GLTexture(this);
+  texture2 = new GLTexture(this);
+  texture3 = new GLTexture(this);
   
   // CP5
   cp5 = new ControlP5(this);
   cp5.addToggle("PLAY", 250, FirstScreenHeight + 100, menuHeight/4, menuHeight/4);
-  cp5.addToggle("BLB", 300, FirstScreenHeight + 25, menuHeight/4, menuHeight/4);
-
+  cp5.addToggle("RESET", 300, FirstScreenHeight + 25, menuHeight/4, menuHeight/4);
+  cp5.addSlider("PLAYHEAD").setPosition(100,50).setRange(0,255);
      
 
   frameRate(120);

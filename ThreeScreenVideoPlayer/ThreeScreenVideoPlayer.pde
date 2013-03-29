@@ -44,10 +44,13 @@ import java.util.Properties;
 //-----------------------------------------------------------------------------------------  
 
 // Video
-GSMovie movieOne, movieTwo, movieThree;
+GSMovie movie1, movie2, movie3;
 
 // Offscreen Graphics Buffers
 GLGraphicsOffScreen glg1, glg2, glg3;
+
+// Textures
+GLTexture texture1, texture2, texture3;
 
 // CP5
 ControlP5 cp5;
